@@ -56,3 +56,46 @@ console.log(x); // 50
 let y = 42;
 let y = 50; // SyntaxError: Identifier 'y' has already been declared
 ```
+
+## Type Conversion, Type Coercion
+
+Type Conversion:
+ - Explicit process of converting one data type to another by using a built-in method or a constructor.
+ - Example: String(42) converts the number 42 to a string
+
+```js
+// Type Conversion
+let num = 42;
+const str = String(num); // "42"
+const bool = Boolean(num); // true
+```
+
+type Coercion:
+- Implicit process of converting one data type to another by the JavaScript engine when it tries to perform an operation on two values of different data types.
+- Example: "3" + 42 coerces the string "3" to a number and performs the addition.
+
+```js
+const num = 42;
+const str = "3";
+const result = num + str; // "423"
+
+```
+
+## Equality Operators: == vs. ===
+
+The == operator:
+- Compares two values for equality, and performs type coercion if the types are different.
+- Example: "42" == 42 returns true, as the string "42" is converted to the number 42 before the comparison.
+```js
+"42" == 42 // true
+"0" == false // true
+
+```
+The === operator:
+- Compares two values for equality, but does not perform type coercion
+- Example: "42" === 42 returns false, as the types are different.
+
+```
+"42" === 42 // false
+"0" === false // false
+```
