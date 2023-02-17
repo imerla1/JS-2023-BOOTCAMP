@@ -99,3 +99,103 @@ The === operator:
 "42" === 42 // false
 "0" === false // false
 ```
+
+## The Switch Statement
+
+In JavaScript, the switch statement is used to perform different actions
+based on different conditions.
+
+the syntax of the switch statement is as follow:
+
+```js
+switch (expression) {
+  case value1:
+    // code block to be executed if expression matches value1
+    break;
+  case value2:
+    // code block to be executed if expression matches value2
+    break;
+  ...
+  default:
+    // code block to be executed if expression doesn't match any value
+}
+
+```
+
+Here, expression is the value that is being compared to each case value. If expression matches a case value, the code block for that case is executed. The break statement is used to exit the switch statement. If expression doesn't match any case value, the default code block is executed.
+
+```js
+let day = 3;
+let dayName;
+
+switch (day) {
+  case 0:
+    dayName = "Sunday";
+    break;
+  case 1:
+    dayName = "Monday";
+    break;
+  case 2:
+    dayName = "Tuesday";
+    break;
+  case 3:
+    dayName = "Wednesday";
+    break;
+  case 4:
+    dayName = "Thursday";
+    break;
+  case 5:
+    dayName = "Friday";
+    break;
+  case 6:
+    dayName = "Saturday";
+    break;
+  default:
+    dayName = "Invalid day";
+}
+
+console.log(dayName); // Output: Wednesday
+```
+
+## Statements and Expressions
+
+In JavaScript, a statement is a piece of code that performs a specific action, while an expression is a piece of code that produces a value.
+
+
+```js
+// Statements
+let x; // variable declaration
+if (x > 0) { // if statement
+  console.log("x is positive");
+}
+
+// Expressions
+5 + 3 // mathematical expression
+myFunction() // function call expression
+x = 10 // assignment expression
+
+```
+
+Ternary Operator in JavaScript
+
+In JavaScript, the ternary operator (also known as the conditional operator) is a shorthand way of writing an if-else statement.
+
+The syntax of the ternary operator is as follows
+
+```js
+condition ? expression1 : expression2
+
+```
+
+The condition is evaluated and if it is true, expression1 is executed and its value is returned. If the condition is false, expression2 is executed and its value is returned.
+
+Example:
+
+```js
+let age = 20;
+let message = age >= 18 ? "You are an adult" : "You are not an adult";
+console.log(message); // Output: "You are an adult"
+
+```
+
+In the example above, the age >= 18 condition is evaluated. Since age is 20, the condition is true, and the expression "You are an adult" is returned and assigned to the message variable.
