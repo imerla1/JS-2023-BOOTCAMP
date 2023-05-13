@@ -53,3 +53,78 @@ const person = { name: 'John Doe', age: 30 };
 printPerson(person); // "Name: John Doe, Age: 30"
 
 ```
+
+## Spread Opeartor
+The spread operator in JavaScript is represented by three consecutive dots `...` and is used to spread the contents of an iterable (such as an array or a string) into individual elements.
+### Spreading an array
+
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+console.log(arr3); // Output: [1, 2, 3, 4, 5, 6]
+```
+
+In the example above, the spread operator is used to spread the elements of arr1 and `arr2` into a new array `arr3`.
+
+### Copying an array
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+console.log(arr2); // Output: [1, 2, 3]
+```
+
+In the example above, the spread operator is used to create a copy of `arr1` and assign it to `arr2`.
+
+### Spreading an object
+
+```js
+const obj1 = { foo: 'bar', baz: 42 };
+const obj2 = { ...obj1, qux: 3.14 };
+console.log(obj2); // Output: { foo: 'bar', baz: 42, qux: 3.14 }
+
+```
+
+n the example above, the spread operator is used to spread the properties of obj1 into a new object obj2. The property qux is also added to obj2 in the same statement.
+
+### Copying an object
+
+```js
+const obj1 = { foo: 'bar', baz: 42 };
+const obj2 = { ...obj1 };
+console.log(obj2); // Output: { foo: 'bar', baz: 42 }
+
+```
+In the example above, the spread operator is used to create a copy of obj1 and assign it to obj2.
+
+## Short Circuiting (&& and ||)
+
+In JavaScript, short-circuit evaluation is a way to optimize conditional logic by evaluating only parts of an expression that are necessary. It works by using the logical operators `&&` and `||` to evaluate expressions.
+
+The `&&` operator **returns the first falsy value**, or the **last value if all values are truthy**. For example:
+
+```js
+const x = 5 && 10 && 0 && 15; // returns 0
+const y = 5 && 10 && 15; // returns 15
+```
+In the first example, the first falsy value is 0, so that's what is returned. In the second example, there are no falsy values, so the last value (15) is returned.
+
+The `||` operator returns the first truthy value, or the last value if all values are falsy. For example:
+
+```js
+const a = undefined || null || 0; // returns 0
+const b = "hello" || null || "world"; // returns "hello"
+```
+
+### The Nullish Coalescing Operator (??)
+
+The Nullish Coalescing Operator (`??`) is a new operator introduced in ES2020. It is used to provide a default value in case a **variable is null or undefined**.
+
+```js
+const myVariable = null;
+const myDefaultValue = "Hello World";
+
+const result = myVariable ?? myDefaultValue;
+console.log(result); // Output: "Hello World"
+
+```
