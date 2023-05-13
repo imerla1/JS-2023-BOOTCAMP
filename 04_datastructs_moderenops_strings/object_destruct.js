@@ -54,5 +54,5 @@ const obj = { j: 7, b: 53 };
 
 // Mutate
 
-({j,b} = obj)
-console.log(j,b)
+({ j, b } = obj);
+console.log(j, b);
