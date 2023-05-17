@@ -45,6 +45,3 @@ const game = {
     },
   };
 
-for (const [k, v] of game) {
-    console.log(k,v)
-}
