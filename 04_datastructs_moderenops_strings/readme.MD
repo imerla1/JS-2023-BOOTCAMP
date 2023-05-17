@@ -128,3 +128,13 @@ const result = myVariable ?? myDefaultValue;
 console.log(result); // Output: "Hello World"
 
 ```
+
+
+## Logical assignment operators
+
+
+Logical assignment operators are shorthand notations for performing a logical operation and then assigning the result to a variable in a single step. There are three logical assignment operators in JavaScript:
+
+1) `&&=` - Logical AND assignment operator
+2) `||=`- Logical OR assignment operator
+3) `??=` - Logical nullish assignment operator
