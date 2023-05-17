@@ -138,3 +138,38 @@ Logical assignment operators are shorthand notations for performing a logical op
 1) `&&=` - Logical AND assignment operator
 2) `||=`- Logical OR assignment operator
 3) `??=` - Logical nullish assignment operator
+
+## Optional Chaining (?.)
+
+
+Optional chaining (?.) is a feature introduced in ECMAScript 2020 (ES2020) that provides a concise way to access properties or call methods on an object without worrying about potential null or undefined values.
+
+The optional chaining operator allows you to safely access nested properties or call methods even if one or more intermediate properties are null or undefined. If any intermediate property in the chain is null or undefined, the expression short-circuits and returns undefined, avoiding an error.
+
+Here's an example to demonstrate the usage of optional chaining:
+
+```js
+const user = {
+  name: 'John',
+  address: {
+    city: 'New York',
+    street: '123 Main St',
+    zipCode: '10001'
+  }
+};
+
+const city = user.address?.city;
+console.log(city); // Output: 'New York'
+
+const postalCode = user.address?.postalCode;
+console.log(postalCode); // Output: undefined
+
+```
+
+In the above example, the user object has an address property, which itself contains nested properties like city, street, and zipCode.
+
+With optional chaining (?.), you can safely access the city property even if address is undefined. If address is defined, the city value is returned. However, if address is undefined, the expression short-circuits and returns undefined, avoiding an error.
+
+Similarly, when attempting to access the non-existent postalCode property using optional chaining, it also short-circuits and returns undefined instead of throwing an error.
+
+Optional chaining can be handy when working with objects that may have optional or conditional properties, and it helps simplify code and improve readability by reducing the need for multiple null/undefined checks.
