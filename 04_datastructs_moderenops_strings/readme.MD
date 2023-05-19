@@ -207,3 +207,30 @@ console.log(set); // Output: Set { 1, true, { name: 'John' } }
 Sets also have several other useful methods, such as `size` to get the number of elements in the set, `clear` to remove all elements, and `forEach` to iterate over the elements.
 
 Sets are particularly useful when you need to store a collection of values and want to ensure uniqueness. They provide a simple interface for managing sets of values and offer efficient lookup and removal operations.
+
+## Maps
+
+In JavaScript, a Map is a built-in object that allows you to store key-value pairs, where both the keys and the values can be of any type. Maps provide an efficient way to manage collections of data and perform key-based operations.
+
+```js
+const map = new Map();
+
+// Adding key-value pairs
+map.set('name', 'John');
+map.set(1, 'One');
+map.set(true, 'Yes');
+
+console.log(map); // Output: Map { 'name' => 'John', 1 => 'One', true => 'Yes' }
+```
+
+### Methods
+
+```js
+console.log(map.get('name')); // Output: 'John'
+console.log(map.get(true)); // Output: 'Yes'
+console.log(map.has('name')); // Output: true
+map.delete(1);
+
+```
+
+Maps also have several other useful methods, such as `size` to get the number of `entries` in the map, clear to remove all entries, and forEach to iterate over the entries.
