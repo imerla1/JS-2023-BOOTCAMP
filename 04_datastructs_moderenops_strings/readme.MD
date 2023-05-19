@@ -173,3 +173,37 @@ With optional chaining (?.), you can safely access the city property even if add
 Similarly, when attempting to access the non-existent postalCode property using optional chaining, it also short-circuits and returns undefined instead of throwing an error.
 
 Optional chaining can be handy when working with objects that may have optional or conditional properties, and it helps simplify code and improve readability by reducing the need for multiple null/undefined checks.
+
+
+## Set
+
+In JavaScript, a Set is a built-in object that allows you to store unique values of any type. It provides an easy and efficient way to manage collections of values without duplicates.
+
+```js
+const set = new Set();
+
+set.add(1);
+set.add('Hello');
+set.add(true);
+set.add({ name: 'John' });
+
+console.log(set); // Output: Set { 1, 'Hello', true, { name: 'John' } }
+```
+
+To check if a value exists in a Set, you can use the has() method:
+```js
+console.log(set.has('Hello')); // Output: true
+console.log(set.has(false)); // Output: false
+
+```
+
+to remove
+
+```js
+set.delete('Hello');
+console.log(set); // Output: Set { 1, true, { name: 'John' } }
+```
+
+Sets also have several other useful methods, such as `size` to get the number of elements in the set, `clear` to remove all elements, and `forEach` to iterate over the elements.
+
+Sets are particularly useful when you need to store a collection of values and want to ensure uniqueness. They provide a simple interface for managing sets of values and offer efficient lookup and removal operations.

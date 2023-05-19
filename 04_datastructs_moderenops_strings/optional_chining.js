@@ -5,11 +5,10 @@ const user = {
     street: "123 Main St",
     zipCode: "10001",
   },
-  order(orderId, name){
-    return `Ordered ${name}: with ID ${orderId}`
-  }
+  order(orderId, name) {
+    return `Ordered ${name}: with ID ${orderId}`;
+  },
 };
-
 
 const city = user.address?.city;
 console.log(city); // Output: 'New York'
@@ -21,7 +20,7 @@ console.log(postalCode); // Output: undefined
 
 const postalCode2 = user.address?.postalCode ?? "default";
 
-console.log(postalCode2)
+console.log(postalCode2);
 
 // Methods Checking
-console.log(user.order?.(0xf5, "CocaCola")?? "Method doesn't exist")
+console.log(user.order?.(0xf5, "CocaCola") ?? "Method doesn't exist");
